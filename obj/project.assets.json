@@ -48,6 +48,18 @@
           "lib/netstandard1.5/Castle.Core.dll": {}
         }
       },
+      "FluentResults/3.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/FluentResults.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/FluentResults.dll": {}
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -254,7 +266,7 @@
           "lib/netstandard2.1/Microsoft.Extensions.Logging.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
+      "Microsoft.Extensions.Logging.Abstractions/6.0.1": {
         "type": "package",
         "compile": {
           "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
@@ -1808,6 +1820,22 @@
         "readme.txt"
       ]
     },
+    "FluentResults/3.8.0": {
+      "sha512": "hi558VqD8zYooLEESQMRTWubCpBeukhnpz+6fSjNgzFpmOXPj77uuejlDo5LExSBw062Qd7eFR8oo0Idyl2H2A==",
+      "type": "package",
+      "path": "fluentresults/3.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "FluentResults-Icon-128.png",
+        "fluentresults.3.8.0.nupkg.sha512",
+        "fluentresults.nuspec",
+        "lib/netstandard2.0/FluentResults.dll",
+        "lib/netstandard2.0/FluentResults.xml",
+        "lib/netstandard2.1/FluentResults.dll",
+        "lib/netstandard2.1/FluentResults.xml"
+      ]
+    },
     "Humanizer.Core/2.8.26": {
       "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "type": "package",
@@ -2158,10 +2186,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
-      "sha512": "/HggWBbTwy8TgebGSX5DBZ24ndhzi93sHUBDvP1IxbZD7FDokYzdAr6+vbWGjw2XAfR2EJ1sfKUotpjHnFWPxA==",
+    "Microsoft.Extensions.Logging.Abstractions/6.0.1": {
+      "sha512": "dzB2Cgg+JmrouhjkcQGzSFjjvpwlq353i8oBQO2GWNjCXSzhbtBRUf28HSauWe7eib3wYOdb3tItdjRwAdwCSg==",
       "type": "package",
-      "path": "microsoft.extensions.logging.abstractions/6.0.0",
+      "path": "microsoft.extensions.logging.abstractions/6.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2205,7 +2233,7 @@
         "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
-        "microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.6.0.1.nupkg.sha512",
         "microsoft.extensions.logging.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -6102,6 +6130,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 11.0.0",
+      "FluentResults >= 3.8.0",
       "Microsoft.EntityFrameworkCore >= 6.0.6",
       "Microsoft.EntityFrameworkCore.Proxies >= 6.0.6",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.6",
@@ -6115,11 +6144,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\badf\\My Private Documents\\Programas\\CinemaAPI\\CinemaAPI.csproj",
+      "projectUniqueName": "C:\\Users\\badf\\My Private Documents\\Programas\\CinemaAPI\\CinemaAPI.csproj",
       "projectName": "CinemaAPI",
-      "projectPath": "c:\\Users\\badf\\My Private Documents\\Programas\\CinemaAPI\\CinemaAPI.csproj",
+      "projectPath": "C:\\Users\\badf\\My Private Documents\\Programas\\CinemaAPI\\CinemaAPI.csproj",
       "packagesPath": "C:\\Users\\badf\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\badf\\My Private Documents\\Programas\\CinemaAPI\\obj\\",
+      "outputPath": "C:\\Users\\badf\\My Private Documents\\Programas\\CinemaAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\badf\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -6149,6 +6178,10 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[11.0.0, )"
+          },
+          "FluentResults": {
+            "target": "Package",
+            "version": "[3.8.0, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",

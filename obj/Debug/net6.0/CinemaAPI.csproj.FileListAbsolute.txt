@@ -115,3 +115,5 @@ C:\Users\badf\My Private Documents\Programas\CinemaAPI\obj\Debug\net6.0\refint\C
 C:\Users\badf\My Private Documents\Programas\CinemaAPI\obj\Debug\net6.0\CinemaAPI.pdb
 C:\Users\badf\My Private Documents\Programas\CinemaAPI\obj\Debug\net6.0\CinemaAPI.genruntimeconfig.cache
 C:\Users\badf\My Private Documents\Programas\CinemaAPI\obj\Debug\net6.0\ref\CinemaAPI.dll
+C:\Users\badf\My Private Documents\Programas\CinemaAPI\bin\Debug\net6.0\FluentResults.dll
+C:\Users\badf\My Private Documents\Programas\CinemaAPI\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll

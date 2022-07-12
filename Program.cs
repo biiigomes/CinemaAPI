@@ -1,5 +1,6 @@
 using AutoMapper;
 using CinemaAPI.Profiles;
+using CinemaAPI.Services;
 using FilmesApi.Data;
 using FilmesApi.Profiles;
 using FilmesAPI.Profiles;
@@ -14,6 +15,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<AppDbContext>();
+
+builder.Services.AddScoped<FilmeService, FilmeService>();
+builder.Services.AddScoped<CinemaService, CinemaService>();
 
 builder.Services.AddAutoMapper(
     typeof(CinemaProfile),
