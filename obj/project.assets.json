@@ -6110,19 +6110,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ferna\\.nuget\\packages\\": {}
+    "C:\\Users\\badf\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\bibi\\C#\\FilmesAPI\\CinemaAPI.csproj",
+      "projectUniqueName": "c:\\Users\\badf\\My Private Documents\\Programas\\CinemaAPI\\CinemaAPI.csproj",
       "projectName": "CinemaAPI",
-      "projectPath": "C:\\bibi\\C#\\FilmesAPI\\CinemaAPI.csproj",
-      "packagesPath": "C:\\Users\\ferna\\.nuget\\packages\\",
-      "outputPath": "C:\\bibi\\C#\\FilmesAPI\\obj\\",
+      "projectPath": "c:\\Users\\badf\\My Private Documents\\Programas\\CinemaAPI\\CinemaAPI.csproj",
+      "packagesPath": "C:\\Users\\badf\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\badf\\My Private Documents\\Programas\\CinemaAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ferna\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\badf\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -6191,7 +6191,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

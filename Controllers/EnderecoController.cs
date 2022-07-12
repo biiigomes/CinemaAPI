@@ -36,7 +36,7 @@ namespace FilmesAPI.Controllers
         [HttpGet]
         public IEnumerable<Endereco> RecuperaEnderecos()
         {
-            return _context.Enderecos;
+            return _context.Enderecos.ToList();
         }
 
         [HttpGet("{id}")]

@@ -69,7 +69,7 @@ namespace CinemaAPI.Migrations
                         column: x => x.EnderecoId,
                         principalTable: "Enderecos",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Cascade);//meio de deleção em cascata
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
