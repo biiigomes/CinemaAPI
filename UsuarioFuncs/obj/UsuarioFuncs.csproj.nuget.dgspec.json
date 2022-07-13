@@ -46,6 +46,10 @@
               "target": "Package",
               "version": "[3.8.0, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -75,6 +79,10 @@
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
               "version": "[6.21.0, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[3.3.0, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
