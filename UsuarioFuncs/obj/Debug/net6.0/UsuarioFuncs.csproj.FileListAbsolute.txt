@@ -50,3 +50,6 @@ C:\Users\badf\My Private Documents\Programas\CinemaAPI\UsuarioFuncs\bin\Debug\ne
 C:\Users\badf\My Private Documents\Programas\CinemaAPI\UsuarioFuncs\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\badf\My Private Documents\Programas\CinemaAPI\UsuarioFuncs\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\badf\My Private Documents\Programas\CinemaAPI\UsuarioFuncs\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\badf\My Private Documents\Programas\CinemaAPI\UsuarioFuncs\bin\Debug\net6.0\MailKit.dll
+C:\Users\badf\My Private Documents\Programas\CinemaAPI\UsuarioFuncs\bin\Debug\net6.0\MimeKit.dll
+C:\Users\badf\My Private Documents\Programas\CinemaAPI\UsuarioFuncs\bin\Debug\net6.0\BouncyCastle.Crypto.dll

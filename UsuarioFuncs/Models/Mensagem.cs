@@ -10,10 +10,9 @@ namespace UsuarioFuncs.Models
         public Mensagem(IEnumerable<string> destinatario, string assunto, int userId, string codigo)
         {
             Destinatario = new List<MailboxAddress>();
-            Destinatario.AddRange(destinatario.Select(d => new MailboxAddress(d)));
+            Destinatario.AddRange(destinatario.Select(d => new MailboxAddress("Bianca Gomes", d)));
             Assunto = assunto;
-            Conteudo = $"https://localhost:7098/ativa?UsuarioId={usuarioId}&CodigoDeAtivacao={codigo}";
-
+            Conteudo = $"https://localhost:7098/ativa?UserId={userId}&CodigoAtivacao={codigo}";
         }
     }
 }

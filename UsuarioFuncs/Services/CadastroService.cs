@@ -1,3 +1,4 @@
+using System.Web;
 using AutoMapper;
 using FluentResults;
 using Microsoft.AspNetCore.Identity;
@@ -29,7 +30,8 @@ namespace UsuarioFuncs.Services
             if(resultadoIdentity.Result.Succeeded) 
             {
                 string code = _userManager.GenerateEmailConfirmationTokenAsync(usuarioIdentity).Result;
-                _emailService.EnviarEmail(new [] { usuarioIdentity.Email }, "Link de ativação", usuarioIdentity.Id, code);
+                var encodedCode = HttpUtility.UrlEncode(code);
+                _emailService.EnviarEmail(new [] { usuarioIdentity.Email }, "Link de ativação", usuarioIdentity.Id, encodedCode);
                 
                 return Result.Ok().WithSuccess(code).WithSuccess(code);
             }
@@ -40,7 +42,7 @@ namespace UsuarioFuncs.Services
 
         public Result AtivaContaUsuario(AtivaContaRequest request)
         {
-            var identityUser = _userManager.Users.Where(usuario => usuario.Id == request.UserId).First();
+            var identityUser = _userManager.Users.First(usuario => usuario.Id == request.UserId);
             var identityResult = _userManager.ConfirmEmailAsync(identityUser, request.CodigoAtivacao).Result;
 
             if(identityResult.Succeeded)

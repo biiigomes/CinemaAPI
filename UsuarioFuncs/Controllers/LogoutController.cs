@@ -18,8 +18,8 @@ namespace UsuarioFuncs.Controllers
         public IActionResult DeslogaUser()
         {
             Result resultado = _logoutService.DeslogaUser();
-            if(resultado.IsFailed) return Unauthorized(resultado.Errors);
-            return Ok(resultado.Successes);
+            if(resultado.IsFailed) return Unauthorized(resultado.Errors.First());
+            return Ok(resultado.Successes.First());
         }
     }
 }

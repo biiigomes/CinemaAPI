@@ -19,8 +19,24 @@ namespace UsuarioFuncs.Controllers
         public IActionResult LogaUser(LoginRequest request)
         {
            Result resultado = _loginService.LogaUser(request); 
-           if (resultado.IsFailed) return Unauthorized(resultado.Errors.FirstOrDefault()); 
-           return Ok(resultado.Successes.FirstOrDefault());
+           if (resultado.IsFailed) return Unauthorized(resultado.Errors.First()); 
+           return Ok(resultado.Successes.First());
+        }
+
+        [HttpPost("/solicita-reset")]
+        public IActionResult SolicitaResetSenhaUsuario(SolicitaResetRequest request)
+        {
+            Result resultado = _loginService.SolicitaResetSenhaUsuario(request);
+            if(resultado.IsFailed) return Unauthorized(resultado.Errors.First());
+            return Ok(resultado.Successes.First());
+        }
+
+        [HttpPost("/efetua-reset")]
+        public IActionResult ResetaSenha(EfetuaResetRequest request)
+        {
+            Result resultado = _loginService.ResetaSenha(request);
+            if(resultado.IsFailed) return Unauthorized(resultado.Errors);
+            return Ok(resultado.Successes.First()); 
         }
     }
 }
