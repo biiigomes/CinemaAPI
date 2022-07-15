@@ -11,28 +11,24 @@ namespace UsuarioFuncs.Services
     public class CadastroService
     {
         private IMapper _mapper;
-        private UserManager<IdentityUser<int>> _userManager;
+        private UserManager<CustomIdentityUser> _userManager;
         private EmailService _emailService;
-        private RoleManager<IdentityRole<int>> _roleManager;
-        public CadastroService(IMapper mapper, UserManager<IdentityUser<int>> userManager, EmailService emailService, RoleManager<IdentityRole<int>> roleManager = null)
+        public CadastroService(IMapper mapper, UserManager<CustomIdentityUser> userManager, EmailService emailService, RoleManager<IdentityRole<int>> roleManager = null)
         {
             _mapper = mapper;
             _userManager = userManager;
             _emailService = emailService;
-            _roleManager = roleManager;
         }
         public Result CadastraUsuario(CreateUsuarioDTO createDto)
         {
             Usuario usuario = _mapper.Map<Usuario>(createDto); 
-            IdentityUser<int> usuarioIdentity = _mapper.Map<IdentityUser<int>>(usuario);
+            CustomIdentityUser usuarioIdentity = _mapper.Map<CustomIdentityUser>(usuario);
             Task<IdentityResult> resultadoIdentity = _userManager
                 .CreateAsync(usuarioIdentity, createDto.Password);
 
+            _userManager.AddToRoleAsync(usuarioIdentity, "regular");
             if(resultadoIdentity.Result.Succeeded) 
-            {            
-                var createRoleResult = _roleManager.CreateAsync(new IdentityRole<int>("admin")).Result;
-                var usuarioRoleResult = _userManager.AddToRoleAsync(usuarioIdentity, "admin").Result;
-                
+            {              
                 string code = _userManager.GenerateEmailConfirmationTokenAsync(usuarioIdentity).Result;
                 var encodedCode = HttpUtility.UrlEncode(code);
                 _emailService.EnviarEmail(new [] { usuarioIdentity.Email }, "Link de ativação", usuarioIdentity.Id, encodedCode);

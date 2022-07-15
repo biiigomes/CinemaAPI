@@ -1,13 +1,14 @@
 using FluentResults;
 using Microsoft.AspNetCore.Identity;
+using UsuarioFuncs.Models;
 
 namespace UsuarioFuncs.Services
 {
     public class LogoutService
     {
-        private SignInManager<IdentityUser<int>> _signinManager;
+        private SignInManager<CustomIdentityUser> _signinManager;
 
-        public LogoutService(SignInManager<IdentityUser<int>> signinManager)
+        public LogoutService(SignInManager<CustomIdentityUser> signinManager)
         {
             _signinManager = signinManager;
         }

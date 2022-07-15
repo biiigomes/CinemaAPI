@@ -2,10 +2,12 @@ using System.Text;
 using AutoMapper;
 using CinemaAPI.Profiles;
 using CinemaAPI.Services;
+using CinemaFuncs.Authorization;
 using FilmesApi.Data;
 using FilmesApi.Profiles;
 using FilmesAPI.Profiles;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
@@ -18,6 +20,15 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<AppDbContext>();
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("IdadeMinima", policy => 
+    {
+        policy.Requirements.Add(new IdadeMinimaRequirement(18));
+    });
+});
+
+builder.Services.AddSingleton<IAuthorizationHandler, IdadeMinimaHandler>();
 
 builder.Services.AddScoped<FilmeService, FilmeService>();
 builder.Services.AddScoped<CinemaService, CinemaService>();

@@ -7,9 +7,9 @@ namespace UsuarioFuncs.Services
 {
     public class LoginService
     {
-        private SignInManager<IdentityUser<int>> _signInManager;
+        private SignInManager<CustomIdentityUser> _signInManager;
         private TokenService _tokenService;
-        public LoginService(SignInManager<IdentityUser<int>> signInManager, TokenService tokenService)
+        public LoginService(SignInManager<CustomIdentityUser> signInManager, TokenService tokenService)
         {
             _signInManager = signInManager;
             _tokenService = tokenService;
@@ -33,7 +33,7 @@ namespace UsuarioFuncs.Services
         }
         public Result ResetaSenha(EfetuaResetRequest request)
         {
-            IdentityUser<int> identityUser =  RecuperaUserPorEmail(request.Email);
+            CustomIdentityUser identityUser =  RecuperaUserPorEmail(request.Email);
             IdentityResult resultadoIdentity = _signInManager.UserManager
                 .ResetPasswordAsync(identityUser, request.Token, request.Password)
                 .Result;
@@ -42,7 +42,7 @@ namespace UsuarioFuncs.Services
         }
         public Result SolicitaResetSenhaUsuario(SolicitaResetRequest request)
         {
-            IdentityUser<int> identityUser = RecuperaUserPorEmail(request.Email);
+            CustomIdentityUser identityUser = RecuperaUserPorEmail(request.Email);
 
             if (identityUser != null)
             {
@@ -53,7 +53,7 @@ namespace UsuarioFuncs.Services
             return Result.Fail("Falha ao solicitar redefinição");
         }
 
-        private IdentityUser<int>RecuperaUserPorEmail(string email)
+        private CustomIdentityUser RecuperaUserPorEmail(string email)
         {
             return _signInManager.UserManager.Users.First(u => u.NormalizedEmail == email);
         }

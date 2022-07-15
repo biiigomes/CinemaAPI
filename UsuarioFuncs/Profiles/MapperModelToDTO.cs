@@ -11,6 +11,7 @@ namespace UsuarioFuncs.Profiles
         { 
             CreateMap<CreateUsuarioDTO, Usuario>();
             CreateMap<Usuario, IdentityUser<int>>();
+            CreateMap<Usuario, CustomIdentityUser>();
         }
     }
 }

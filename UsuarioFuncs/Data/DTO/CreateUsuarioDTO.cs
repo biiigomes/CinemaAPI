@@ -14,5 +14,7 @@ namespace UsuarioFuncs.Data.DTO
         [Required]
         [Compare("Password")]
         public string Repassword { get; set; }
+        [Required]
+        public DateTime DataNascimento { get; set; }
     }
 }

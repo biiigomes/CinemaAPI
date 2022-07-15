@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using UsuarioFuncs.Data;
+using UsuarioFuncs.Models;
 using UsuarioFuncs.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,7 +20,7 @@ builder.Services.AddScoped<LogoutService, LogoutService>();
 
 builder.Services.AddScoped<EmailService, EmailService>();
 
-builder.Services.AddIdentity<IdentityUser<int>, IdentityRole<int>>(
+builder.Services.AddIdentity<CustomIdentityUser, IdentityRole<int>>(
     opt => opt.SignIn.RequireConfirmedEmail = true
     )
     .AddEntityFrameworkStores<AppDbContext>()

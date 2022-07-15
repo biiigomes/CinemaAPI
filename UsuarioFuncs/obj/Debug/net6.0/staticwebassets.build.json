@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "dNf80+F0gHEPg41imDywD2A3Xo3TtlARbQ2+bP1lfg4=",
+  "Hash": "QHfOiLpFW9svPth/D26dMjSETEZdu9t56bsVDhSMqzg=",
   "Source": "UsuarioFuncs",
   "BasePath": "_content/UsuarioFuncs",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\badf\\My Private Documents\\Programas\\CinemaAPI\\CinemaFuncs\\CinemaAPI.csproj",
+      "Version": 2,
+      "Source": "CinemaAPI",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+    }
+  ],
   "DiscoveryPatterns": [],
   "Assets": []
 }
