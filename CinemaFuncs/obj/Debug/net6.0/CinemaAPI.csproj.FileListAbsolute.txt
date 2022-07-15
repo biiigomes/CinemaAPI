@@ -158,3 +158,10 @@ C:\Users\badf\My Private Documents\Programas\CinemaAPI\CinemaFuncs\obj\Debug\net
 C:\Users\badf\My Private Documents\Programas\CinemaAPI\CinemaFuncs\obj\Debug\net6.0\CinemaAPI.pdb
 C:\Users\badf\My Private Documents\Programas\CinemaAPI\CinemaFuncs\obj\Debug\net6.0\CinemaAPI.genruntimeconfig.cache
 C:\Users\badf\My Private Documents\Programas\CinemaAPI\CinemaFuncs\obj\Debug\net6.0\ref\CinemaAPI.dll
+C:\Users\badf\My Private Documents\Programas\CinemaAPI\CinemaFuncs\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\badf\My Private Documents\Programas\CinemaAPI\CinemaFuncs\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\badf\My Private Documents\Programas\CinemaAPI\CinemaFuncs\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\badf\My Private Documents\Programas\CinemaAPI\CinemaFuncs\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\badf\My Private Documents\Programas\CinemaAPI\CinemaFuncs\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\badf\My Private Documents\Programas\CinemaAPI\CinemaFuncs\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\badf\My Private Documents\Programas\CinemaAPI\CinemaFuncs\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
